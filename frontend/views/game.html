@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{> head}}
+        <link rel="stylesheet" href="/public/css/style.css">
+        <title>Chess Game</title>
+    </head>
+    <body>
+        <h2>Chess Game</h2>
+        <div class="game-container">
+            <div class="game-layout">
+                <!-- Left sidebar -->
+                <div class="sidebar">
+                    <div class="player-info" id="black-info">
+                        <h3>Black Player</h3>
+                        <div class="timer" id="blackTimer">10:00</div>
+                    </div>
+                    <div class="move-history">
+                        <h3>Move History</h3>
+                        <div id="moveHistory"></div>
+                    </div>
+                    <div class="player-info" id="white-info">
+                        <h3>White Player</h3>
+                        <div class="timer" id="whiteTimer">10:00</div>
+                    </div>
+                </div>
+
+                <!-- Center board -->
+                <div class="board-container">
+                    <div id="myBoard"></div>
+                    <div class="game-status">
+                        <div id="status"></div>
+                    </div>
+                </div>
+
+                <!-- Right sidebar -->
+                <div class="sidebar">
+                    <div class="chat-container">
+                        <h3>Chat</h3>
+                        <div id="chatMessages"></div>
+                        <div class="chat-input">
+                            <input type="text" id="chatInput" placeholder="Type your message...">
+                            <button id="sendMessage">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let playerColor = '{{color}}';
+            console.log('Playing as ' + playerColor);
+        </script>
+        <script src="/public/js/index.js"></script>
+    </body>
+</html> 
